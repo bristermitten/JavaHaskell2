@@ -1,0 +1,12 @@
+# Binaries
+/**/*.hi
+/**/*.o
+/**/*.so
+/**/*.class
+
+# All the headers are generated so don't need to be committed
+/**/*.h
+
+
+# VSC
+workspace.code-workspace
