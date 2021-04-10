@@ -1,0 +1,5 @@
+name: HaskellPlugin
+version: 1.0
+main: me.bristermitten.haskellplugin.HaskellPlugin
+commands:
+  haskell: {}
