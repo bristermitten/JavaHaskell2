@@ -1,7 +1,7 @@
 #include "../Haskell/Calc_stub.h" //Provides an explicit binding to add()
+#include "Library.h"
 #include <HsFFI.h>
 #include <jni.h>
-#include "Library.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -16,5 +16,7 @@ JNIEXPORT jstring JNICALL Java_Library_runHS(JNIEnv *env, jclass clazz) {
   char *buf = (char *)malloc(len);
   strcpy(buf, res);
   free(res);
-  return (*env)->NewStringUTF(env, buf);
+  jstring jstr = (*env)->NewStringUTF(env, buf);
+  free(buf);
+  return jstr;
 }
